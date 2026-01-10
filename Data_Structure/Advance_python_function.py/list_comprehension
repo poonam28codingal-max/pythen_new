@@ -1,0 +1,12 @@
+#List Comrehension
+list1=[1,2,3,4,5,6,7,8]
+
+#Find Odd number using comrehension
+odd_list=[i for i in list1 if i%2!=0]
+print("Odd List is ",odd_list)
+
+#Convert the first letter of every Elements to Capital
+list2=["apple","orange","banana","melon"]
+
+fruit_list=[i.capitalize() for i in list2]
+print("Fruis list is ",fruit_list)
