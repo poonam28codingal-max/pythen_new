@@ -44,7 +44,7 @@ class Sprite(pygame.sprite.Sprite):
     boundary_hit = False
     # Check for collision with left or right boundaries and reverse direction
     if self.rect.left <= 0 or self.rect.right >= 500:
-      self.velocity[0] = -self.velocity[0]
+      self.velocity[0] = - self.velocity[0]
       boundary_hit = True
     # Check for collision with top or bottom boundaries and reverse direction
     if self.rect.top <= 0 or self.rect.bottom >= 400:
@@ -71,11 +71,15 @@ def change_background_color():
 all_sprites_list = pygame.sprite.Group()
 # Instantiate the sprite
 sp1 = Sprite(WHITE, 20, 30)
+sp2=Sprite(ORANGE, 20, 30)
 # Randomly position the sprite
 sp1.rect.x = random.randint(0, 480)
 sp1.rect.y = random.randint(0, 370)
+sp2.rect.x = random.randint(0, 480)
+sp2.rect.y = random.randint(0, 370)
 # Add the sprite to the group
 all_sprites_list.add(sp1)
+all_sprites_list.add(sp2)
 
 # Create the game window
 screen = pygame.display.set_mode((500, 400))
